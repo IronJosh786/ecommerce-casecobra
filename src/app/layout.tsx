@@ -5,14 +5,11 @@ import Footer from "@/components/Footer";
 import { Recursive } from "next/font/google";
 import Providers from "@/components/Providers";
 import { Toaster } from "@/components/ui/toaster";
+import { constructMetadata } from "@/lib/utils";
 
 const recursive = Recursive({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Ecommerce Store",
-  description:
-    "Don't just protect your phone but your precious memories along with it.",
-};
+export const metadata = constructMetadata();
 
 export default function RootLayout({
   children,
